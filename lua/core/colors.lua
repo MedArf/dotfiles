@@ -12,7 +12,7 @@ Insert preferred color scheme in the `color_scheme` variable.
 Color scheme is loaded at "Load color scheme" after settings sections, setup
 must be called before loading.
 --]]
-local status_ok, color_scheme = pcall(require, 'onedark')
+local status_ok, color_scheme = 'tokyonight'--color_scheme = pcall(require, 'onedark')
 if not status_ok then
   return
 end
