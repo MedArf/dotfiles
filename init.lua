@@ -3,10 +3,6 @@
 Neovim init file
 Maintainer: brainf+ck
 Website: https://github.com/brainfucksec/neovim-lua
-
---]]
-
--- Import Lua modules
 require('core/lazy')
 require('core/autocmds')
 require('core/keymaps')
@@ -19,4 +15,11 @@ require('plugins/indent-blankline')
 require('plugins/nvim-cmp')
 require('plugins/nvim-treesitter')
 require('plugins/alpha-nvim')
+require('plugins/gitsigns')
+--]]
+require("config.autocmds")
+require("config.keymaps")
+require("config.lazy")
+
+
 
