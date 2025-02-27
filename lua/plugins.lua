@@ -31,18 +31,6 @@ priority = 1000, -- make sure to load this before all the other start plugins
 dependencies = { 'kyazdani42/nvim-web-devicons' },
 },
 
--- Git labels
-{
-'lewis6991/gitsigns.nvim',
-lazy = true,
-dependencies = {
-'nvim-lua/plenary.nvim',
-'kyazdani42/nvim-web-devicons',
-},
-config = function()
-require('gitsigns').setup{}
-end
-},
 
 -- File explorer
 {

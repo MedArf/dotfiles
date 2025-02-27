@@ -35,15 +35,15 @@ map('n', 'l', '<C-w>l')
 
 --Screen redimension
 --Horizontal
-map('n', '<', '<C-w><')
-map('n', '>', '<C-w>>')
+map('n', '<', '<C-w><', { noremap = true, silent = false })
+map('n', '>', '<C-w>>', { noremap = true, silent = false })
 --Vertical
 map('n', '+', '<C-w>+')
 map('n', '-', '<C-w>-')
 -- Reload configuration without restart nvim
 map('n', '<leader>r', ':so %<CR>')
 
--- Fast saving with <leader> and s
+-- Fast saving withTleader> and s
 map('n', '<leader>s', ':w<CR>', { noremap = true, silent = false })
 
 -- Close all windows and exit from Neovim with <leader> and q
@@ -111,6 +111,18 @@ map('n', '<leader>uc', ':Uncomment<CR>')
 vim.g.copilot_no_tab_map = true
 vim.g.codeium_disable_bindings = true
 map('i', '<C-\\>',"codeium#Accept()", {noremap = true, silent = true, expr = true })
-map('i', '<C-p>', "codeium#Clear()", {noremap = true, silent = true, expr = true })
-map('i', '<C-]>', "codeium#CycleCompletions(1)", {noremap = true, silent = true, expr = true })
-map('i', '<C-[>', "codeium#CycleCompletions(-1)", { silent = true, expr = true })
+map('i', '<C-Escape>', "codeium#Clear()", {noremap = true, silent = true, expr = true })
+map('i', '<C-.>', "codeium#CycleCompletions(1)", {noremap = true, silent = true, expr = true })
+map('i', '<C-,>', "codeium#CycleCompletions(-1)", { silent = true, expr = true })
+
+map('n','<leader>gp', ":Gitsigns preview_hunk<CR>",{noremap = true, silent = true})
+map('n','<leader>gt', ":Gitsigns toggle_current_line_blame<CR>",{noremap = true, silent = true})
+
+map("n", "<leader>tn", ":TestNearest<CR>", { noremap = true, silent = true })
+map("n", "<leader>t", ":TestFile<CR>", { noremap = true, silent = true })
+map("n", "<leader>a", ":TestSuite<CR>", { noremap = true, silent = true })
+map("n", "<leader>l", ":TestLast<CR>", { noremap = true, silent = true })
+map("n", "<leader>g", ":TestVisit<CR>", { noremap = true, silent = true })
+
+--windows moving
+--remap C-W C-X
