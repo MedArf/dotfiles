@@ -108,6 +108,7 @@ map('v', '<leader>c', ':Comment<CR>')
 map('n', '<leader>c', ':Comment<CR>')
 map('v', '<leader>uc', ':Uncomment<CR>')
 map('n', '<leader>uc', ':Uncomment<CR>')
+
 vim.g.copilot_no_tab_map = true
 vim.g.codeium_disable_bindings = true
 map('i', '<C-\\>',"codeium#Accept()", {noremap = true, silent = true, expr = true })
@@ -117,6 +118,7 @@ map('i', '<C-,>', "codeium#CycleCompletions(-1)", { silent = true, expr = true }
 
 map('n','<leader>gp', ":Gitsigns preview_hunk<CR>",{noremap = true, silent = true})
 map('n','<leader>gt', ":Gitsigns toggle_current_line_blame<CR>",{noremap = true, silent = true})
+map('n','<leader>gd', ":Gitsigns diffthis<CR>",{noremap = true, silent = true})
 
 map("n", "<leader>tn", ":TestNearest<CR>", { noremap = true, silent = true })
 map("n", "<leader>t", ":TestFile<CR>", { noremap = true, silent = true })

@@ -18,9 +18,9 @@ priority = 1000, -- make sure to load this before all the other start plugins
     end,
  },
 -- Other color schemes:
-{ 'rebelot/kanagawa.nvim', lazy = true },
-{ 'tanvirtin/monokai.nvim', lazy = true },
-{ 'https://github.com/rose-pine/neovim', name = 'rose-pine', lazy = true },
+--{ 'rebelot/kanagawa.nvim', lazy = true },
+--{ 'tanvirtina/monokai.nvim', lazy = true },
+--{ 'https://hithub.com/rose-pine/neovim', name = 'rose-pine', lazy = true },
 
 -- Icons
 { 'kyazdani42/nvim-web-devicons', lazy = true },
@@ -111,5 +111,40 @@ dependencies = {
 {'dgrbrady/nvim-docker',
 requires = {'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim'},
 rocks = '4O4/reactivex' -- ReactiveX Lua implementation,
+},
+{
+  "pmizio/typescript-tools.nvim",
+  dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+  opts = {},
+},
+{
+  "p00f/clangd_extensions.nvim",
+  lazy = true,
+  config = function() end,
+  opts = {
+    inlay_hints = {
+      inline = false,
+    },
+    ast = {
+      --These require codicons (https://github.com/microsoft/vscode-codicons)
+      role_icons = {
+        type = "",
+        declaration = "",
+        expression = "",
+        specifier = "",
+        statement = "",
+        ["template argument"] = "",
+      },
+      kind_icons = {
+        Compound = "",
+        Recovery = "",
+        TranslationUnit = "",
+        PackExpansion = "",
+        TemplateTypeParm = "",
+        TemplateTemplateParm = "",
+        TemplateParamObject = "",
+      },
+    },
+  },
 }
 }
